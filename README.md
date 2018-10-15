@@ -1,11 +1,12 @@
-# notes-to-me
-cheat-sheets for daily tools
+# notes-to-myself
 
-## [docker](cheatsheets/docker)
 
-## [kubernetes](cheatsheets/kubernetes)
+### [golang](cheatsheets/golang)
 
-## [markdown](cheatsheets/markdown-cheatsheet.pdf)
+### [docker](cheatsheets/docker)
 
-## [vi](cheatsheets/vi-cheatsheet.pdf)
+### [kubernetes](cheatsheets/kubernetes)
 
+### [markdown](cheatsheets/markdown-cheatsheet.pdf)
+
+### [vi](cheatsheets/vi-cheatsheet.pdf)
