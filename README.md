@@ -1,9 +1,6 @@
 # notes-to-me
 cheat-sheets for daily tools
 
-
-
-
 ## [docker](cheatsheets/docker)
 
 ## [kubernetes](cheatsheets/kubernetes)
