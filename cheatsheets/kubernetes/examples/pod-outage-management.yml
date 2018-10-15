@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: outage-management
+  labels:
+    app: outage-management
+    zone: prod
+    version: v1
+spec:
+  containers:
+  - name: outage-management
+    image: 35.156.234.183:5000/outage-management
+    ports:
+    - containerPort: 8080
