@@ -1,5 +1,6 @@
 # notes-to-myself
 
+## Languages/Tools
 
 ### [golang](cheatsheets/golang)
 
@@ -11,8 +12,6 @@
 
 ### [vi](cheatsheets/vi-cheatsheet.pdf)
 
-
 ## Web Links
 
-[12factor app] (https://12factor.net/)
-
+[12factor app] (www.12factor.net/)
