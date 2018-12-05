@@ -1,29 +1,40 @@
 Docker Commands
 --------------------------------
 
-docker images
-docker image ls
-docker container ls -a
-docker ps -a
+list images
+> docker images
+> docker image ls
 
+list all containers including not runnings
+> docker ps -a
+> docker container ls -a
+
+delete image
 > docker rmi
+
+delete container
 > docker rm
 
+pull image from repo
 > docker pull <image>
 
-Run images
+run image
 > docker run <image>
+
+run detached
+> docker run -d <image>
 
 run image but delete container when it stops
 > docker run --rm <image>
 
+start|stop container
+> docker start|stop <container>
 
-```docker start|stop <container>```
+show logs 
+> docker logs -f <container>
 
-```docker logs -f <container>```
-
-Connect to container and open bash console
-```docker exec -it <container> /bin/bash```
+connect to container and open bash console
+> docker exec -it <container> /bin/bash
 
 docker run -d -p 5000:5000 --restart=always --name registry registry:2
 
