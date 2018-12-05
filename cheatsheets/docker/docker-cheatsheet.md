@@ -11,17 +11,19 @@ docker ps -a
 
 > docker pull <image>
 
-
 Run images
 > docker run <image>
 
 run image but delete container when it stops
 > docker run --rm <image>
 
-docker start|stop <container>
 
-docker logs -f <container>
-docker exec -it <container> /bin/bash
+```docker start|stop <container>```
+
+```docker logs -f <container>```
+
+Connect to container and open bash console
+```docker exec -it <container> /bin/bash```
 
 docker run -d -p 5000:5000 --restart=always --name registry registry:2
 
