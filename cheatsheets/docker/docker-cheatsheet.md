@@ -6,11 +6,18 @@ docker image ls
 docker container ls -a
 docker ps -a
 
-docker rmi
-docker rm
+> docker rmi
+> docker rm
 
-docker pull <image>
-docker run <image>
+> docker pull <image>
+
+
+Run images
+> docker run <image>
+
+run image but delete container when it stops
+> docker run --rm <image>
+
 docker start|stop <container>
 
 docker logs -f <container>
