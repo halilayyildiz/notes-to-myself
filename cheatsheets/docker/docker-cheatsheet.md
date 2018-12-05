@@ -36,38 +36,45 @@ show logs
 connect to container and open bash console
 > docker exec -it <container> /bin/bash
 
-docker run -d -p 5000:5000 --restart=always --name registry registry:2
+> docker run -d -p 5000:5000 --restart=always --name registry registry:2
 
-docker tag noms/topo-tracer:latest 35.156.234.183:5000/noms/topo-tracer:0.0.1
-docker push 35.156.234.183:5000/noms/topo-tracer:0.0.1
-docker tag noms/outage-management:latest 35.156.234.183:5000/noms/outage-management:0.0.1
-docker push 35.156.234.183:5000/noms/outage-management:0.0.1
+tag and push image to repository
+> docker tag noms/topo-tracer:latest <repo_address>:<repo_port>/noms/topo-tracer:0.0.1
+> docker push <repo_address>:<repo_port>/noms/topo-tracer:0.0.1
+
+tag and push image to repository
+> docker tag noms/outage-management:latest 35.156.234.183:5000/noms/outage-management:0.0.1
+> docker push 35.156.234.183:5000/noms/outage-management:0.0.1
 
 
-docker compose up -d
-docker compose stop
-docker compose down
-docker-compose rm -f
-docker compose build --no-cache
+> docker compose up -d
+> docker compose stop
+> docker compose down
+> docker-compose rm -f
+> docker compose build --no-cache
 
-docker inspect <container id> | grep "IPAddress"
-docker inspect -f '{{ .Mounts }}' <container>
+> docker inspect <container id> | grep "IPAddress"
+> docker inspect -f '{{ .Mounts }}' <container>
 
-docker commit <container> (name/product:version)
-docker save <container> target_name.tar
-docker load
+> docker commit <container> (name/product:version)
+> docker save <container> target_name.tar
+> docker load
 
-docker-machine start|stop|restart
-docker-machine ip defult
+> docker-machine start|stop|restart
+> docker-machine ip defult
 
 
 
 !!!!!!!! dangerous !!!!!!!!!!!!!!!!!!!!!!
 
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
+stop all containers
+> docker stop $(docker ps -a -q)
 
-docker rmi $(docker images -f "dangling=true" -q)
+delete all containers
+> docker rm $(docker ps -a -q)
+
+delete dangling images
+> docker rmi $(docker images -f "dangling=true" -q)
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -99,26 +106,3 @@ docker run -d --name gitlab-runner --restart always \
 
 
 docker exec -it gitlab-runner gitlab-runner register
-
-
-Install GitLab Runner
-Specify the following URL during the Runner setup:https://code.siemens.com/ 
-Use the following registration token during setup:jFWQFsp6dY9KQ1TxBYj8 
-Start the Runner!
-
-https://code.siemens.com/
-jFWQFsp6dY9KQ1TxBYj8
-siguard-runner-docker
-docker,maven
-
-curl -v https://code.siemens.com/ci/api/v1/runners/register.json
-
-docker exec -it gitlab-runner gitlab-runner register \
-  --non-interactive \
-  --url "https://code.siemens.com/" \
-  --registration-token "jFWQFsp6dY9KQ1TxBYj8" \
-  --executor "docker" \
-  --description "docker-runner" \
-  --tag-list "docker,maven" \
-  --run-untagged \
-  --locked="false"
