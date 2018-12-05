@@ -1,4 +1,4 @@
-Docker Commands
+# Docker Commands
 --------------------------------
 
 list images
@@ -65,7 +65,7 @@ tag and push image to repository
 
 
 
-!!!!!!!! dangerous !!!!!!!!!!!!!!!!!!!!!!
+## Dangerous Commands
 
 stop all containers
 > docker stop $(docker ps -a -q)
@@ -77,7 +77,6 @@ delete dangling images
 > docker rmi $(docker images -f "dangling=true" -q)
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 
 ======================================================================
 
