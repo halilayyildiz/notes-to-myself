@@ -41,7 +41,16 @@ az container list --resource-group <resource_group> -o table
 
 create containers
 ```
-az container create --resource-group adp-cassandra --name <container_name> --image <docker_image> --cpu 4 --memory 8 --registry-username <acr_name> --registry-password <password> --dns-name-label <name_for_dns> --ports 80
+az container create \
+--resource-group adp-cassandra \
+--name <container_name> \
+--image <docker_image> \
+--cpu 4 \
+--memory 8 \
+--registry-username <acr_name> \
+--registry-password <password> \
+--dns-name-label <name_for_dns> \
+--ports 80
 ```
 
 delete container
