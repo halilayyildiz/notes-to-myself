@@ -68,13 +68,19 @@ tag and push image to repository
 ## Dangerous Commands
 
 stop all containers
-> docker stop $(docker ps -a -q)
+```
+docker stop $(docker ps -a -q)
+```
 
 delete all containers
-> docker rm $(docker ps -a -q)
+```
+docker rm $(docker ps -a -q)
+```
 
 delete dangling images
-> docker rmi $(docker images -f "dangling=true" -q)
+```
+docker rmi $(docker images -f "dangling=true" -q)
+```
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
