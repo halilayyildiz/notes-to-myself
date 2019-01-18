@@ -1,30 +1,61 @@
-Kubectl Commands
---------------------------------
-> minikube start --cpus 2 --memory 4096
-> minikube.exe start --cpus 2 --memory 8196 --insecure-registry "35.156.234.183"
-> minikube.exe start --kubernetes-version="v1.11.0" --vm-driver="virtualbox" --alsologtostderr
-> minikube.exe start --kubernetes-version="v1.11.0" --vm-driver="virtualbox" --alsologtostderr --insecure-registry "35.156.234.183"
-> minikube start --docker-env HTTP_PROXY=http://198.138.0.6:9400 --docker-env HTTPS_PROXY=https://198.138.0.6:9400 --docker-env NO_PROXY=localhost,127.0.0.0/8,192.0.0.0/8 --kubernetes-version="v1.11.0" --vm-driver="virtualbox" --alsologtostderr
-> minikube start --docker-env="http_proxy=http://198.138.0.6:9400" --docker-env="https_proxy=https://198.138.0.6:9400"
+# Kubectl Commands
 
-> minikube dashboard
-> minikube service outage-management-service --url
+```bash
+minikube start --cpus 2 --memory 4096
+```
 
-> kubectl run outage-management --image=35.156.234.183:5000/noms/outage-management:0.0.1
-> kubectl run topo-tracer --image=35.156.234.183:5000/noms/topo-tracer:0.0.1
+```bash
+minikube.exe start --cpus 2 --memory 8196 --insecure-registry "35.156.234.183"
+```
 
-======================================================================
+```bash
+minikube.exe start --kubernetes-version="v1.11.0" --vm-driver="virtualbox" --alsologtostderr
+```
 
-> kubectl config current-context
+```bash
+minikube.exe start --kubernetes-version="v1.11.0" --vm-driver="virtualbox" --alsologtostderr --insecure-registry "35.156.234.183"
+```
 
-> kubectl create|apply -f <file.yml>
-> kubectl delete pods <pod_name>
+open kubernetes dahsboard
 
-> kubectl get nodes
-> kubectl get pods|rcs|services|deployments
+```bash
+minikube dashboard
+```
 
-> kubectl logs <pod_name>
-> kubectl get events --sort-by=.metadata.creationTimestamp
+```bash
+minikube service <your_service> --url
+```
 
+```bash
+kubectl run <service_name> --image=35.156.234.183:5000/noms/outage-management:0.0.1
+```
 
-======================================================================
+## ------------
+
+```bash
+kubectl config current-context
+```
+
+```bash
+kubectl create|apply -f <file.yml>
+```
+
+```bash
+kubectl delete pods <pod_name>
+```
+
+```bash
+kubectl get nodes
+```
+
+```bash
+kubectl get pods|rcs|services|deployments
+```
+
+```bash
+kubectl logs <pod_name>
+```
+
+```bash
+kubectl get events --sort-by=.metadata.creationTimestamp
+```
