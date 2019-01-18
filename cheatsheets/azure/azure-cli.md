@@ -1,59 +1,78 @@
-# Commands
+# Azure CLI Commands
 
-Acount login
+Interactive login
+
+```bash
+az login
 ```
+
+Show account information
+
+```bash
 az login
 ```
 
 ## Azure Container Registry
 
 get login server name
-```
+
+```bash
 az acr list --resource-group <resource_group> --query "[].{acrLoginServer:loginServer}" --output table
 ```
 
-login
-```
+login to container registry
+
+```bash
 az acr login --name <acr_name>
 ```
 
-list images
-```
+list images under some repo
+
+```bash
 az acr repository list --name <acr_name>  --output table
 ```
 
-list all tags
-```
-az acr repository show-tags --name <acr_name> --repository <repository_for_specofoc_image> -o table
+list all tags under some repo
+
+```bash
+az acr repository show-tags --name <acr_name> --repository <repository> -o table
 ```
 
-show password of registry
-```
+show password of the registry
+
+```bash
 az acr credential show --name <acr_name> --query "passwords[0].value"
 ```
 
 ## Azure Container Instances
 
-list containers
-```
+list container instances
+
+```bash
 az container list --resource-group <resource_group> -o table
 ```
 
-create containers
-```
+create container instance with identity assigment and environment variables
+
+```bash
 az container create \
---resource-group adp-cassandra \
+--resource-group <resource_group> \
 --name <container_name> \
 --image <docker_image> \
---cpu 4 \
+--cpu 2 \
 --memory 8 \
 --registry-username <acr_name> \
 --registry-password <password> \
 --dns-name-label <name_for_dns> \
 --ports 80
+--assign-identity /subscriptions/<subscription_id>/resourceGroups/<resource_group>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<user_assigned_identity> \
+--environment-variables \
+    STORAGE_ACCOUNT=<storage_account> \
+    AZURE_KEYVAULT_URL=https://somekeyvault.vault.azure.net/
 ```
 
-delete container
-```
+delete container instance
+
+```bash
 az container delete --name  <container_name> --resource-group <resource_group> -o table --yes -y
 ```
