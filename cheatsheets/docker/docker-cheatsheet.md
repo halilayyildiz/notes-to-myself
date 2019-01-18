@@ -91,7 +91,7 @@ Inspect container and mounted volumes
 docker inspect -f '{{ .Mounts }}' <container>
 ```
 
-# Docker Compose Commands
+## Docker Compose Commands
 
 ```bash
 docker compose build --no-cache
@@ -112,9 +112,6 @@ docker compose down
 ```bash
 docker-compose rm -f
 ```
-
-
-
 
 ## Dangerous Commands
 
