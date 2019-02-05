@@ -1,4 +1,6 @@
-# Simple Commands
+# GIT Commands
+
+## Basic  Commands
 
 Show status
 
