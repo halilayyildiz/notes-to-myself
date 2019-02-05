@@ -9,6 +9,8 @@
 
 [Maven](maven/README.md)
 
+[GIT](git/README.md)
+
 [Vi (pdf)](vi/vi-cheatsheet.pdf)
 
 [Markdown (pdf)](markdown/markdown-cheatsheet.pdf)
