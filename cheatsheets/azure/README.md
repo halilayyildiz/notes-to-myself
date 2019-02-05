@@ -6,10 +6,22 @@ Interactive login
 az login
 ```
 
-Show account information
+List your accounts
 
 ```bash
-az login
+az account list
+```
+
+Show active account
+
+```bash
+az account show
+```
+
+Change active account for CLI
+
+```bash
+az account set --subscription <subscription ID>
 ```
 
 ## Azure Container Registry
