@@ -8,9 +8,9 @@
 
 ### [kubernetes](cheatsheets/kubernetes)
 
-### [markdown](cheatsheets/markdown-cheatsheet.pdf)
+### [maven](cheatsheets/maven)
 
-### [vi](cheatsheets/vi-cheatsheet.pdf)
+### [git](cheatsheets/git)
 
 ## Web Links
 
