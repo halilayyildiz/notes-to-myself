@@ -15,5 +15,11 @@ top -p `pgrep "java"`
 Show only some specific processes
 
 ```bash
-ps -ef | grep java
+ps -ef | grep "<process name>"
+```
+
+Show my ip address
+
+```bash
+curl  ifconfig.me
 ```

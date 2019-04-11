@@ -10,6 +10,8 @@
 
 ### [maven](cheatsheets/maven)
 
+### [vi](cheatsheets/vi)
+
 ### [git](cheatsheets/git)
 
 ## Web Links
