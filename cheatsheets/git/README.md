@@ -14,16 +14,10 @@ Show actual branch
 git branch
 ```
 
-Find specific files and run some command 
+Find specific files and run some command
 
 ```bash
  find . -name '*.sh' -exec echo {} \;
-```
-
-Find public ip address
-
-```bash
-curl  ifconfig.me
 ```
 
 ## Advanced Commands

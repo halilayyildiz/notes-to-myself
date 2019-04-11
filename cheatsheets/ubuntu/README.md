@@ -18,7 +18,7 @@ Show only some specific processes
 ps -ef | grep "<process name>"
 ```
 
-Show my ip address
+Find public ip address
 
 ```bash
 curl  ifconfig.me
