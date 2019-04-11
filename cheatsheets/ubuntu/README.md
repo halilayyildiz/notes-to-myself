@@ -29,3 +29,17 @@ Find public ip address
 ```bash
 curl  ifconfig.me
 ```
+
+Show ubuntu version
+
+```bash
+lsb_release -a
+```
+
+## apt
+
+Show installed version of package
+
+```bash
+apt list <package_name>
+```
