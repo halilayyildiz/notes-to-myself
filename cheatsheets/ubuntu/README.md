@@ -1,5 +1,11 @@
 # Ubuntu/Bash Commands
 
+List hidden directories
+
+```bash
+ls -ld .?*
+```
+
 Check which JDK packages are installed
 
 ```bash
