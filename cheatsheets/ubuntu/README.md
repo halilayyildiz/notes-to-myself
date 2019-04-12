@@ -43,3 +43,13 @@ Show installed version of package
 ```bash
 apt list <package_name>
 ```
+
+## Windows Subsystem for Linux
+
+Restart Ubuntu subsystem
+
+```bash
+#  Using CMD (Administrator)
+net stop LxssManager
+net start LxssManager
+```
