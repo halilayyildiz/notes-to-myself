@@ -88,3 +88,34 @@ delete container instance
 ```bash
 az container delete --name  <container_name> --resource-group <resource_group> -o table --yes -y
 ```
+
+## Azure Kubertenes (AKS)
+
+create new k8s cluster
+
+```bash
+# create resource group
+az group create --name h3l-k8s --location westeurope
+# create kubernetes cluster
+az aks create --resource-group h3l-k8s --name adp-h3l-k8s --node-count 2 --node-vm-size Standard_D1_v2 --generate-ssh-keys
+```
+
+configure kubectl to connect to your k8s cluster
+
+```bash
+# sdfsdf 
+az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+```
+
+start the k8s dashboard
+
+```bash
+az aks browse --resource-group myResourceGroup --name myAKSCluster
+
+```
+
+```bash
+az aks show --resource-group <resource_group> --name <myAKSCluster> --query <nodeResourceGroup> -o tsv
+```
+
+
