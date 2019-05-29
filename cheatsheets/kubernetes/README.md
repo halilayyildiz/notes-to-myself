@@ -46,7 +46,7 @@ kubectl get nodes
 
 ## Pods, Services, Deployments
 
-Apply resource definitions
+Apply object definitions
 
 ```bash
 kubectl create|apply -f <file.yaml>
@@ -64,7 +64,7 @@ Delete pods
 kubectl delete pods <pod_name>
 ```
 
-Get specific service and follow changes 
+Get specific service and watch changes
 
 ```bash
 kubectl get service <Service_name> --watch
@@ -76,6 +76,12 @@ Print pod logs
 kubectl logs <pod_name>
 ```
 
+Print pods with node information
+
+```bash
+kubectl get pods -o wide --sort-by="{.spec.nodeName}"
+```
+
 Print all events
 
 ```bash
@@ -84,16 +90,25 @@ kubectl get events --sort-by=.metadata.creationTimestamp
 
 ## Namespaces
 
-List namespace
+List namespaces
 
 ```bash
 kubectl get namespace
 ```
 
-You can permanently save the namespace for all subsequent kubectl commands in that context.
+Permanently save the namespace for all subsequent kubectl commands in that context.
 
 ```bash
 kubectl config set-context $(kubectl config current-context) --namespace=<insert-namespace-name-here>
 # Validate it
 kubectl config view | grep namespace:
+```
+
+Not all objects are in a namespace
+
+```bash
+# In a namespace
+kubectl api-resources --namespaced=true
+# Not in a namespace
+kubectl api-resources --namespaced=false
 ```

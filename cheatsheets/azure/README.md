@@ -103,7 +103,7 @@ az aks create --resource-group h3l-k8s --name adp-h3l-k8s --node-count 2 --node-
 configure kubectl to connect to your k8s cluster
 
 ```bash
-# sdfsdf 
+# setup credentials
 az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
 ```
 

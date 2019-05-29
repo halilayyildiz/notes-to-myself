@@ -35,12 +35,13 @@ run image
 
 ```bash
 docker run <image>
+
 ```
 
-run detached
+run detached and with mapped port
 
 ```bash
-docker run -d <image>
+docker run -d -p 8080:8080 <image> # detached and with port mapping
 ```
 
 run image but delete container when it stops
