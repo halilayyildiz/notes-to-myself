@@ -111,7 +111,6 @@ start the k8s dashboard
 
 ```bash
 az aks browse --resource-group myResourceGroup --name myAKSCluster
-
 ```
 
 ```bash
