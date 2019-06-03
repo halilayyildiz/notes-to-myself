@@ -26,8 +26,30 @@ minikube dashboard
 minikube service <your_service> --url
 ```
 
+## Context
+
+Show config
+
 ```bash
-kubectl run <service_name> --image=35.156.234.183:5000/noms/outage-management:0.0.1
+kubectl config view
+```
+
+List k8s contexts
+
+```bash
+kubectl config get-contexts
+```
+
+Show current context
+
+```bash
+kubectl config current-context
+```
+
+Set current context
+
+```bash
+kubectl config current-context <context_name>
 ```
 
 ## Cluster & Nodes
