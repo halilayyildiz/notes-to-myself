@@ -27,7 +27,7 @@ ps -ef | grep "<process name>"
 Find public ip address
 
 ```bash
-curl  ifconfig.me
+curl ifconfig.me
 ```
 
 Show ubuntu version

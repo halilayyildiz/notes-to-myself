@@ -104,10 +104,10 @@ Print pods with node information
 kubectl get pods -o wide --sort-by="{.spec.nodeName}"
 ```
 
-Print all events
+Print all events and watch
 
 ```bash
-kubectl get events --sort-by=.metadata.creationTimestamp
+kubectl get events --sort-by=.metadata.creationTimestamp -w
 ```
 
 ## Namespaces
@@ -133,4 +133,10 @@ Not all objects are in a namespace
 kubectl api-resources --namespaced=true
 # Not in a namespace
 kubectl api-resources --namespaced=false
+```
+
+List specific apps under some specific namespace
+
+```bash
+kubectl get service -l app=<name> --namespace <namespace>
 ```
