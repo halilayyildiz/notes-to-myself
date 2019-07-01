@@ -140,3 +140,11 @@ List specific apps under some specific namespace
 ```bash
 kubectl get service -l app=<name> --namespace <namespace>
 ```
+
+## Monitoring
+
+Display resource usage of nodes|pods
+
+```bash
+kubectl top node|pod
+```
