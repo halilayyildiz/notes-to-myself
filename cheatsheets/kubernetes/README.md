@@ -110,6 +110,18 @@ Print all events and watch
 kubectl get events --sort-by=.metadata.creationTimestamp -w
 ```
 
+Get a shell to the running container
+
+```bash
+kubectl exec -it shell-demo -- /bin/bash
+```
+
+Scale pods
+
+```bash
+kubectl scale deployment <deployment_name> --replicas=0
+```
+
 ## Namespaces
 
 List namespaces
