@@ -34,6 +34,12 @@ List installed charts (included deleted ones)
 helm list -a
 ```
 
+Update chart from directory
+
+```bash
+helm upgrade <chart_name> <path_to_directory>
+```
+
 Delete release
 
 ```bash
