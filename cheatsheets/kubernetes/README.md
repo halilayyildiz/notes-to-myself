@@ -1,31 +1,5 @@
 # Kubectl Commands
 
-```bash
-minikube start --cpus 2 --memory 4096
-```
-
-```bash
-minikube.exe start --cpus 2 --memory 8196 --insecure-registry "35.156.234.183"
-```
-
-```bash
-minikube.exe start --kubernetes-version="v1.11.0" --vm-driver="virtualbox" --alsologtostderr
-```
-
-```bash
-minikube.exe start --kubernetes-version="v1.11.0" --vm-driver="virtualbox" --alsologtostderr --insecure-registry "35.156.234.183"
-```
-
-open kubernetes dahsboard
-
-```bash
-minikube dashboard
-```
-
-```bash
-minikube service <your_service> --url
-```
-
 ## Context
 
 Show config
@@ -64,6 +38,12 @@ Get cluster nodes
 
 ```bash
 kubectl get nodes
+```
+
+Get detailed info of node
+
+```bash
+kubectl describe  node <node_name>
 ```
 
 ## Pods, Services, Deployments
@@ -113,7 +93,7 @@ kubectl get events --sort-by=.metadata.creationTimestamp -w
 Get a shell to the running container
 
 ```bash
-kubectl exec -it shell-demo -- /bin/bash
+kubectl exec -it <pod_name> -- /bin/bash
 ```
 
 Scale pods
