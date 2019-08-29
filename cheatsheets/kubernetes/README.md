@@ -102,6 +102,18 @@ Scale pods
 kubectl scale deployment <deployment_name> --replicas=0
 ```
 
+List endpoints
+
+```bash
+kubectl get endpoints
+```
+
+List pods behind a endpoint
+
+```bash
+kubectl get endpoints <endpoint> -o=jsonpath='{.subsets[*].addresses[*].ip}' | tr ' ' '\n' | xargs -I % kubectl get pods --field-selector=status.podIP=%
+```
+
 ## Namespaces
 
 List namespaces
