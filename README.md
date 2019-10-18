@@ -1,18 +1,20 @@
 # notes-to-myself
 
-## Languages/Tools
+## Cheatsheets
 
-### [golang](cheatsheets/golang)
+### [azure](cheatsheets/azure.md)
 
-### [docker](cheatsheets/docker)
+### [docker](cheatsheets/docker.md)
 
-### [kubernetes](cheatsheets/kubernetes)
+### [kubernetes](cheatsheets/kubernetes.md)
 
-### [maven](cheatsheets/maven)
+### [helm](cheatsheets/helm.md)
 
-### [vi](cheatsheets/vi)
+### [maven](cheatsheets/maven.md)
 
-### [git](cheatsheets/git)
+### [vim](cheatsheets/vim.md)
+
+### [git](cheatsheets/git.md)
 
 ## Web Links
 
