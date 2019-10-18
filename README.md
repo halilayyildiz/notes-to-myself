@@ -1,6 +1,6 @@
 # notes-to-myself
 
-## Cheatsheets
+## Cheat Sheets
 
 ### [azure](cheatsheets/azure.md)
 
