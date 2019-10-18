@@ -1,16 +1,18 @@
 
 # Cheatsheets
 
-[Azure](azure/README.md)
+[Azure](azure.md)
 
-[Docker](docker/README.md)
+[Docker](docker.md)
 
-[Kubernetes](kubernetes/README.md)
+[Kubernetes](kubernetes.md)
 
-[Maven](maven/README.md)
+[Helm](helm.md)
 
-[GIT](git/README.md)
+[Maven](maven.md)
 
-[Vi (pdf)](vi/vi-cheatsheet.pdf)
+[Git](git.md)
 
-[Markdown (pdf)](markdown/markdown-cheatsheet.pdf)
+[Vim](vim.md)
+
+[Markdown (pdf)](markdown-cheatsheet.pdf)
