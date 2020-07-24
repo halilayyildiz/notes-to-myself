@@ -152,3 +152,8 @@ Display resource usage of nodes|pods
 ```bash
 kubectl top node|pod
 ```
+
+Display resource usage of pods sorted by cpu utilization
+```bash
+watch "kubectl top pod --all-namespaces | sort --reverse --key 3 --numeric"
+```
