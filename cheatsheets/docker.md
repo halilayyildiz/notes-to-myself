@@ -133,3 +133,12 @@ delete dangling images
 ```bash
 docker rmi $(docker images -f "dangling=true" -q)
 ```
+
+
+## Examples
+
+Create new MySQL database instance
+```bash
+docker run --detach --name=mysql-instance --env="MYSQL_ROOT_PASSWORD=password" --publish 3306:3306 mysql
+```
+
